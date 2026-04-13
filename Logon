@@ -1,0 +1,26 @@
+userone = "admin"
+usertwo = "zhangsan"
+userthree = "taoge"
+useronepwdone = "666888"
+usertwopwdtwo = "123456"
+userthreepwdthree = "888666"
+
+exit = True
+
+while exit:
+    username = input("请输入用户名：")
+    if username == "q" or username == "Q":
+        exit = False
+        break
+    password = input("请输入密码：")
+    if username == userone and password == useronepwdone:
+        print("登录成功(按q退出)")
+    elif username == usertwo and password == usertwopwdtwo:
+        print("登录成功(按q退出)")
+    elif username == userthree and password == userthreepwdthree:
+        print("登录成功(按q退出)")
+    else:
+        print("用户名或密码错误，请重新尝试(按q退出)")
+        if username == "q" or username == "Q" or password == "q" or password == "Q":
+            exit = False
+            break
