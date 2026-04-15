@@ -1,0 +1,31 @@
+# s =[]
+# for i in range(10):
+#
+#     s.append(int(input("输入十个数字")))
+# s.sort()
+# print(s)
+# # print(*s,sep="\n")
+# print(f"最小值为{s[0]}\n最大值为{s[9]}")
+# print(f"平均值为{sum(s)/len(s)}")
+
+# 合并列表并去重
+# s = [1,2,3,4,5,6,7,8,9]
+# u = [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# for i in s:
+#     u.append(i)
+# print(u)
+#
+# p = []
+#
+# for i in u:
+#     if i in p:
+#         continue
+#     p.append(i)
+# print(p,end="\n")
+
+#简单方法，合并列表并去重且排序
+s = [1,2,3,4,5,6,7,8,9]
+u = [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# u = s + u
+u = [*s,*u]
+print(u)
