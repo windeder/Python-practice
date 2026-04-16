@@ -1,0 +1,8 @@
+#验证邮箱格式，包含一个@和至少一个.
+email = str(input("请输入邮箱:"))
+aite = email.count('@')
+point = email.count('.')
+if aite == 1 and point >= 1:
+    print(email,"格式验证成功")
+else:
+    print("格式验证错误，请写@和.")
