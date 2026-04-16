@@ -1,0 +1,13 @@
+s = "Hello-Pthon-Hello-World"
+index = s.find("-")
+print(index)
+c = s.count("-")
+print(c)
+su = s.upper()
+print(su)
+sl = s.lower()
+print(sl)
+slist = s.split()
+print(slist)
+sr = s.replace("-", "+")
+print(sr)
