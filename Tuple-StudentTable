@@ -1,0 +1,19 @@
+#有这么一个表，记录学生成绩，把学生总分和平均分打印出来
+students = (("S001","王琳",85,92,87)
+,("S001","王琳",85,92,87)
+,("S002","李琳",88,92,87)
+,("S003","六琳",87,92,87)
+,("S004","张琳",84,92,87)
+,("S005","钱琳",89,92,87)
+,("S006","周琳",83,92,87)
+)
+print("学号\t\t\t姓名\t\t语文\t\t数学\t\t英语\t\t总分\t\t平均分")
+# for s in students:
+#     total = s[2] + s[3] + s[4]
+#     avg = total/3
+#     print(f"{s[0]}\t\t{s[1]}\t\t{s[2]}\t\t{s[3]}\t\t{s[4]}\t\t{total}\t\t{avg:.1f}")
+#方式二，不同于切片操作，用元组的解包来分类命名，更加直观
+for id,name,chinese,math,english  in students:
+    total = chinese+math+english
+    avg = total/3
+    print(f"{id}\t\t{name}\t\t{chinese}\t\t{math}\t\t{english}\t\t{total}\t\t{avg:.1f}")
