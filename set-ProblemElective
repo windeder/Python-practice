@@ -1,0 +1,29 @@
+football_set = {"王林","李华","李建","溜溜"}
+basketball_set = {"李华","溜溜"}
+french_set = {"溜溜","李华"}
+art_set = {"王林","李华"}
+#找到同时选修了法语和艺术的学生
+print(french_set.intersection(art_set)) #交集
+fa_set = french_set & art_set #另一方法 & -->交集
+print(fa_set)
+
+#同时选修了四门课的学生
+o = [w for w in football_set if w in basketball_set and w in football_set and w in art_set and w in french_set]
+p = football_set & basketball_set & art_set & french_set
+print(p)
+print(o)
+
+#找到选修了足球但没有选修篮球的学生
+print(football_set.difference(basketball_set)) #差集
+print([w for w in football_set - basketball_set]) #差集的另一种表示方法
+q = football_set - basketball_set
+print(q)
+fb_set = {s for s in football_set if s not in basketball_set} #集合推导式
+print(fb_set)
+
+#查看每个学生的选课数量
+all_set = football_set | basketball_set | french_set | art_set #并集union
+print(all_set)
+all_set = [*football_set,*basketball_set,*french_set,*art_set] #集合解包成列表
+print(all_set)
+print("李华选课情况：" + str(all_set.count("李华")) + " 王林选课情况：" + str(all_set.count("王林")) )
